@@ -1,0 +1,12 @@
+<md-toolbar class="md-primary md-whiteframe-z2">
+    <div class="md-toolbar-tools">
+        <df-toolbar buttons="leftButtons"></df-toolbar>
+        <span>{{caption}}</span>
+        <df-main-menu layout="row" ng-if="isOnMedia(showMenuOnMedia)"></df-main-menu>
+        <div layout="row" ng-transclude>
+
+        </div>
+        <span flex></span>
+        <df-toolbar buttons="rightButtons"></df-toolbar>
+    </div>
+</md-toolbar>

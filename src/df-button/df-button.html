@@ -1,0 +1,7 @@
+<div layout="column">
+    <md-button class="{{getClasses()}}" ng-click="doAction(action)" aria-label="caption" ng-show="isOnMedia(media)" flex>
+        <md-tooltip md-direction="bottom">{{caption}}</md-tooltip>
+        <span ng-show="showCaption(dfClass, caption)">{{caption}}</span>
+        <md-icon ng-show="showIcon(dfClass, icon)" md-svg-icon="{{icon}}"></md-icon>
+    </md-button>
+</div>

@@ -1,0 +1,30 @@
+{
+  "name": "df-topbar",
+  "authors": [
+    "Luis <luisinweb@gmail.com>"
+  ],
+  "description": "barra principal",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dinf-uern/df-toolbar.git"
+  },
+  "version": "0.1.0",
+  "main": "df-toolbar.js",
+  "keywords": [
+    "dinf",
+    "toolbar"
+  ],
+  "dependencies": {
+    "angular": "1.4.8",
+    "angular-material": "1.0.x"
+  },
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

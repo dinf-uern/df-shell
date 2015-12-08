@@ -1,0 +1,6 @@
+<div layout="column">
+    <md-sidenav class="md-whiteframe-z2" ng-class="{'md-sidenav-left': side !== 'right', 'md-sidenav-right': side === 'right'}" md-component-id="getComponentId()" md-is-open="dfSidenav.showSidenav[side]" md-is-locked-open="isFixed()" flex>
+        <div ng-include="partialOnSmall" ng-if="partialOnSmall && isOnMedia(smallMedias)"></div>
+        <div ng-include="partialOnLarge" ng-if="partialOnLarge && isOnMedia(largeMedias)"></div>
+    </md-sidenav>
+</div>

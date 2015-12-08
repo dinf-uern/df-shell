@@ -1,0 +1,7 @@
+node_modules/
+bower_components/
+vendor/
+coverage/
+.sass-cache/
+.idea/
+.tmp/
