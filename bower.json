@@ -1,0 +1,25 @@
+{
+  "name": "df-shell",
+  "description": "",
+  "main": "dist/df-shell.js",
+  "authors": [
+    "Luis <luisinweb@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "dinf",
+    "shell",
+    "ui",
+    "angular",
+    "material"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
