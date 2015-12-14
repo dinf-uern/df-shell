@@ -1,7 +1,11 @@
 {
   "name": "df-shell",
   "description": "",
-  "main": "dist/df-shell.js",
+  "main": [
+    "dist/df-shell.js",
+    "dist/df-shell.css"
+
+  ],
   "authors": [
     "Luis <luisinweb@gmail.com>"
   ],

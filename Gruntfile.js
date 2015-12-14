@@ -13,18 +13,29 @@ module.exports = function(grunt) {
             options: {
 
             },
-            dist: {
+            js: {
                 src: ['src/<%= pkg.name %>.module.js', 'src/**/*.js'],
                 dest: 'dist/df-shell.js'
+            },
+            css: {
+                src: ['src/**/*.css'],
+                dest: 'dist/<%= pkg.name %>.css'
             }
         },
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
-            build: {
+            js: {
                 src: 'dist/<%= pkg.name %>.js',
                 dest: 'dist/<%= pkg.name %>.min.js'
+            }
+        },
+        cssmin: {
+            target: {
+                files: {
+                    'dist/df-shell.min.css': 'dist/df-shell.css'
+                }
             }
         },
         watch: {
@@ -43,8 +54,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-angular-templates');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // Default task(s).
     grunt.registerTask('prepare', ['ngtemplates', 'concat']);
-    grunt.registerTask('build', ['ngtemplates', 'concat', 'uglify']);
+    grunt.registerTask('build', ['ngtemplates', 'concat', 'uglify', 'cssmin']);
 };
