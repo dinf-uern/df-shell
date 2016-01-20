@@ -20,20 +20,30 @@ angular.module('df.shell').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('src/df-float-actions/df-float-actions.html',
-    "<div class=\"df-float-actions-container\">\n" +
-    "  <div layout=\"row\" layout-align=\"end end\">\n" +
-    "    <div layout=\"column\" class=\"df-float-actions\">\n" +
-    "      <df-button df-class=\"item.class || 'md-fab md-accent md-hue-2'\" caption=\"item.caption\" icon=\"item.icon\" action=\"item.action\" ng-repeat=\"item in buttons\">\n" +
-    "      </df-button>\n" +
-    "    </div>\n" +
-    "  </div>\n" +
-    "</div>\n"
+    "<div class=\"df-float-actions-container\">\r" +
+    "\n" +
+    "  <div layout=\"row\" layout-align=\"end end\">\r" +
+    "\n" +
+    "    <div layout=\"column\" class=\"df-float-actions\">\r" +
+    "\n" +
+    "      <df-button df-class=\"item.class || 'md-fab md-accent md-hue-2'\" caption=\"item.caption\" icon=\"item.icon\" action=\"item.action\" ng-repeat=\"item in buttons\">\r" +
+    "\n" +
+    "      </df-button>\r" +
+    "\n" +
+    "    </div>\r" +
+    "\n" +
+    "  </div>\r" +
+    "\n" +
+    "</div>\r" +
+    "\n"
   );
 
 
   $templateCache.put('src/df-main-menu/df-main-menu.html',
-    "<div layout=\"{{menuLayout}}\">\n" +
-    "  <df-button caption=\"item.caption\" action=\"item.action\" ng-repeat=\"item in getItems()\" hide-df-sidenavs=\"true\" active-class=\"'md-accent md-hue-1'\" active=\"isActive(item)\"></df-button>\n" +
+    "<div layout=\"{{menuLayout}}\">\r" +
+    "\n" +
+    "  <df-button caption=\"item.caption\" action=\"item.action\" ng-repeat=\"item in getItems()\" hide-df-sidenavs=\"true\" active-class=\"'md-accent md-hue-1'\" active=\"isActive(item)\"></df-button>\r" +
+    "\n" +
     "</div>"
   );
 
@@ -86,7 +96,11 @@ angular.module('df.shell').run(['$templateCache', function($templateCache) {
     "\n" +
     "        <df-toolbar buttons=\"leftButtons\"></df-toolbar>\r" +
     "\n" +
-    "        <span>{{caption}}</span>\r" +
+    "        <img class=\"app-logo-gt-sm\" ng-src=\"{{logoGtSm}}\" ng-if=\"logoGtSm\" hide show-gt-sm>\r" +
+    "\n" +
+    "        <img class=\"app-logo-sm\" ng-src=\"{{logoSm || logoGtSm}}\" ng-if=\"logoSm || logoGtSm\" hide show-sm>\r" +
+    "\n" +
+    "        <span ng-if=\"!(logoSm || logoGtSm)\">{{caption}}</span>\r" +
     "\n" +
     "        <df-main-menu layout=\"row\" ng-if=\"isOnMedia(showMenuOnMedia)\"></df-main-menu>\r" +
     "\n" +

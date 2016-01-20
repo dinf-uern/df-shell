@@ -1,7 +1,9 @@
 <md-toolbar class="md-primary md-whiteframe-z2">
     <div class="md-toolbar-tools">
         <df-toolbar buttons="leftButtons"></df-toolbar>
-        <span>{{caption}}</span>
+        <img class="app-logo-gt-sm" ng-src="{{logoGtSm}}" ng-if="logoGtSm" hide show-gt-sm>
+        <img class="app-logo-sm" ng-src="{{logoSm || logoGtSm}}" ng-if="logoSm || logoGtSm" hide show-sm>
+        <span ng-if="!(logoSm || logoGtSm)">{{caption}}</span>
         <df-main-menu layout="row" ng-if="isOnMedia(showMenuOnMedia)"></df-main-menu>
         <div layout="row" ng-transclude>
 

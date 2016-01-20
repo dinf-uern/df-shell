@@ -7,7 +7,9 @@ angular.module('df.shell').
               caption: '=',
               leftButtons: '=',
               rightButtons: '=',
-              showMenuOnMedia: '='
+              showMenuOnMedia: '=',
+              logoSm: '=',
+              logoGtSm: '='
             },
             templateUrl: 'src/df-topbar/df-topbar.html',
             controller: ['$scope', '$mdMedia', function($scope, $mdMedia) {
