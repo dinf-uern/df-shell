@@ -266,7 +266,7 @@ angular.module('df.shell').run(['$templateCache', function($templateCache) {
   $templateCache.put('src/df-main-menu/df-main-menu.html',
     "<div layout=\"{{menuLayout}}\">\r" +
     "\n" +
-    "  <df-button caption=\"item.caption\" action=\"item.action\" ng-repeat=\"item in getItems()\" hide-df-sidenavs=\"true\" active-class=\"'md-primary md-raised md-hue-2'\" active=\"isActive(item)\"></df-button>\r" +
+    "  <df-button caption=\"item.caption\" action=\"item.action\" ng-repeat=\"item in getItems()\" hide-df-sidenavs=\"true\" active-class=\"'md-primary md-raised md-hue-1'\" active=\"isActive(item)\"></df-button>\r" +
     "\n" +
     "</div>"
   );
@@ -298,17 +298,23 @@ angular.module('df.shell').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('src/df-toolbar/df-toolbar.html',
-    "<df-button\r" +
+    "<div layout=\"row\">\r" +
     "\n" +
-    "        df-class=\"btn.class || 'md-icon-button'\"\r" +
+    "        <df-button\r" +
     "\n" +
-    "        caption=\"btn.caption\" action=\"btn.action\"\r" +
+    "                df-class=\"btn.class || 'md-icon-button'\"\r" +
     "\n" +
-    "        icon=\"btn.icon\" media=\"btn.media\"\r" +
+    "                caption=\"btn.caption\" action=\"btn.action\"\r" +
     "\n" +
-    "        ng-repeat=\"btn in buttons\">\r" +
+    "                icon=\"btn.icon\" media=\"btn.media\"\r" +
     "\n" +
-    "</df-button>\r" +
+    "                ng-repeat=\"btn in buttons\">\r" +
+    "\n" +
+    "        </df-button>\r" +
+    "\n" +
+    "</div>\r" +
+    "\n" +
+    "\r" +
     "\n"
   );
 
