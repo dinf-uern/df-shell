@@ -266,7 +266,7 @@ angular.module('df.shell').run(['$templateCache', function($templateCache) {
   $templateCache.put('src/df-main-menu/df-main-menu.html',
     "<div layout=\"{{menuLayout}}\">\r" +
     "\n" +
-    "  <df-button caption=\"item.caption\" action=\"item.action\" ng-repeat=\"item in getItems()\" hide-df-sidenavs=\"true\" active-class=\"'md-accent md-hue-1'\" active=\"isActive(item)\"></df-button>\r" +
+    "  <df-button caption=\"item.caption\" action=\"item.action\" ng-repeat=\"item in getItems()\" hide-df-sidenavs=\"true\" active-class=\"'md-primary md-raised md-hue-2'\" active=\"isActive(item)\"></df-button>\r" +
     "\n" +
     "</div>"
   );
