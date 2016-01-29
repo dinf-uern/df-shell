@@ -20,7 +20,7 @@ angular.module('df.shell')
         $scope.isActive = function(menuItem){
           var result = false;
 
-          if (menuItem.action && menuItem.action.state && $state.includes(menuItem.action.state))
+          if (menuItem && menuItem.activeState && $state.includes(menuItem.activeState))
             result = true;
 
           return result;
