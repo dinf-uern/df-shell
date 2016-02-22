@@ -2,6 +2,7 @@ angular.module('df.shell').
     directive('dfSidenav', function() {
         var navbar = {
             replace: true,
+            transclude: true,
             scope: {
                 side: '@',
                 smallMedias: '=',
