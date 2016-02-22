@@ -275,11 +275,7 @@ angular.module('df.shell').run(['$templateCache', function($templateCache) {
   $templateCache.put('src/df-sidenav/df-sidenav.html',
     "<div layout=\"column\">\r" +
     "\n" +
-    "    <md-sidenav class=\"md-whiteframe-z2\" ng-class=\"{'md-sidenav-left': side !== 'right', 'md-sidenav-right': side === 'right'}\" md-component-id=\"getComponentId()\" md-is-open=\"dfSidenav.showSidenav[side]\" md-is-locked-open=\"isFixed()\" flex>\r" +
-    "\n" +
-    "        <div ng-include=\"partialOnSmall\" ng-if=\"partialOnSmall && isOnMedia(smallMedias)\"></div>\r" +
-    "\n" +
-    "        <div ng-include=\"partialOnLarge\" ng-if=\"partialOnLarge && isOnMedia(largeMedias)\"></div>\r" +
+    "    <md-sidenav class=\"md-whiteframe-z2\" ng-class=\"{'md-sidenav-left': side !== 'right', 'md-sidenav-right': side === 'right'}\" md-component-id=\"getComponentId()\" md-is-open=\"dfSidenav.showSidenav[side]\" md-is-locked-open=\"isFixed()\" ng-transclude=\"\" flex>\r" +
     "\n" +
     "    </md-sidenav>\r" +
     "\n" +
@@ -355,6 +351,7 @@ angular.module('df.shell').
     directive('dfSidenav', function() {
         var navbar = {
             replace: true,
+            transclude: true,
             scope: {
                 side: '@',
                 smallMedias: '=',
